@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
 
   def destroy
     binding.pry
-    if !session[:name].nil?
+    if !current_user.nil?
       session.delete :name
       redirect_to root_path
     end
