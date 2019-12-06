@@ -1,5 +1,5 @@
 <% if session[:name].nil? || session[:name].empty? %>
-  <%= link_to "Login", login_path %>
+  <%= link_to "Login", root_path %>
 <% else %>
   <h1>Hi, <%= current_user %>.</h1>
   <%= link_to "Secret Page", secret_path %>
