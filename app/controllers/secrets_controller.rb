@@ -8,6 +8,6 @@ class SecretsController < ApplicationController
   private
 
   def require_login
-    redirect_to sessions_new_path unless current_user
+    redirect_to sessions_new_path unless !current_user.nil?
   end
 end
