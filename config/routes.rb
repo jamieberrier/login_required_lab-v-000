@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'sessions/new'
 
   get '/login' => 'sessions#new'
-  post '/welcome' => 'sessions#create', as: :login
+  post '/login' => 'sessions#create'
   post '/logout' => 'sessions#destroy'
   # Visit the root of the app and be redirected to a login page.
   root 'sessions#new'
