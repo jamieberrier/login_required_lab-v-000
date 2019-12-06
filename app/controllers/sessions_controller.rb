@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
       redirect_to login_path
     else
       session[:name] = params[:name]
-      render 'application/welcome'
+      render "application/welcome"
     end
   end
 
