@@ -7,6 +7,7 @@ class SessionsController < ApplicationController
       redirect_to root_path
     else
       session[:name] = params[:name]
+      # Once logged in, a user should see the welcome page. This page should greet the user and link them to the secret page.
       render "application/welcome"
     end
   end
