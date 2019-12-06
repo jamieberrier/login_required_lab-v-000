@@ -1,3 +1,4 @@
+<!-- Once logged in, a user should see the welcome page. This page should greet the user and link them to the secret page. -->
 <% if session[:name].nil? || session[:name].empty? %>
   <%= link_to "Login", root_path %>
 <% else %>
