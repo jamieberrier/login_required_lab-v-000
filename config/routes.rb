@@ -8,7 +8,6 @@ Rails.application.routes.draw do
 
   get 'secret' => 'secrets#show'
 
-  #get 'secret' => 'secrets#show'
   # Visit the root of the app and be redirected to a login page.
   root 'sessions#new'
 
