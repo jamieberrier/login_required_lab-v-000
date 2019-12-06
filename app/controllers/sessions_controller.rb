@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     if params[:name].nil? || params[:name].empty?
       redirect_to root_path
     else
-      current_user = params[:name]
+      session[:name] = params[:name]
       render "application/welcome"
     end
   end
