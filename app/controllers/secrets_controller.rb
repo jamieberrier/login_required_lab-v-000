@@ -3,7 +3,7 @@ class SecretsController < ApplicationController
     if current_user
       redirect_to secrets_show_path
     else
-      redirect_to login_path
+      redirect_to sessions_new_path
     end
   end
 end
