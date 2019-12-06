@@ -6,13 +6,12 @@ class SessionsController < ApplicationController
     if params[:name].nil? || params[:name].empty?
       redirect_to root_path
     else
-      session[:name] = params[:name]
+      current_user = params[:name]
       render "application/welcome"
     end
   end
 
   def destroy
-    binding.pry
     if !current_user.nil?
       session.delete :name
       redirect_to root_path
