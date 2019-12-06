@@ -1,7 +1,7 @@
 <% if session[:name].nil? || session[:name].empty? %>
   <%= link_to "Login", root_path %>
 <% else %>
-  <h1>Hi, <%= current_user %>.</h1>
+  <h1>Hi, <%= session[:name] %>.</h1>
   <%= link_to "Secret Page", secret_path %>
   <%= form_tag ({controller: 'sessions', action: 'destroy', method: 'post'}) do %>
     <input type=submit value='logout'>
