@@ -8,7 +8,6 @@ class SecretsController < ApplicationController
   private
 
   def require_login
-    flash[:message] = "Shhhhhh"
     redirect_to root_path unless session.include? :name
   end
 end
