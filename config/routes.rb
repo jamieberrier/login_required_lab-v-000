@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  get 'sessions/new'
+  #get 'sessions/new'
 
   post '/welcome' => 'sessions#create'
-  
+
   post '/logout' => 'sessions#destroy'
 
   get 'secret' => 'secrets#show'
